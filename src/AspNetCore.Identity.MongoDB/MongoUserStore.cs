@@ -71,8 +71,12 @@ namespace AspNetCore.Identity.MongoDB
 
             cancellationToken.ThrowIfCancellationRequested();
 
+<<<<<<< HEAD
             await _usersCollection.InsertOneAsync(user, cancellationToken: cancellationToken)
                 .ConfigureAwait(false);
+=======
+            await _usersCollection.InsertOneAsync(user, null, cancellationToken).ConfigureAwait(false);
+>>>>>>> 1d8cd83bc9ec974667d80be296da36c9446fa151
 
             return IdentityResult.Success;
         }
