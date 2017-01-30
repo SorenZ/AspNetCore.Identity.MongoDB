@@ -36,10 +36,9 @@ namespace AspNetCore.Identity.MongoDB
                 throw new ArgumentNullException(nameof(userName));
             }
 
-<<<<<<< HEAD
+
             Id = ObjectId.GenerateNewId().ToString();
-=======
->>>>>>> 1d8cd83bc9ec974667d80be296da36c9446fa151
+
             UserName = userName;
             CreatedOn = new Occurrence();
 
