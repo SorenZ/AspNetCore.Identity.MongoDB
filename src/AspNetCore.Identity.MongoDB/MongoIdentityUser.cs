@@ -44,7 +44,7 @@ namespace AspNetCore.Identity.MongoDB
             _logins = new List<MongoUserLogin>();
         }
 
-        public string Id { get; private set; }
+        public string Id { get; set; }
         public string UserName { get; private set; }
         public string NormalizedUserName { get; private set; }
         public MongoUserEmail Email { get; private set; }
@@ -229,10 +229,6 @@ namespace AspNetCore.Identity.MongoDB
 
             DeletedOn = new Occurrence();
         }
-
-        private static string GenerateId(string userName)
-        {
-            return userName.ToLower();
-        }
+        
     }
 }
