@@ -21,7 +21,8 @@ namespace AspNetCore.Identity.MongoDB
         IUserTwoFactorStore<TUser>,
         IUserEmailStore<TUser>,
         IUserLockoutStore<TUser>,
-        IUserPhoneNumberStore<TUser>
+        IUserPhoneNumberStore<TUser>,
+        IQueryableUserStore<TUser> 
         where TUser : MongoIdentityUser
     {
         private static bool _initialized = false;
@@ -790,5 +791,7 @@ namespace AspNetCore.Identity.MongoDB
 
             await Task.WhenAll(tasks).ConfigureAwait(false);
         }
+
+        public IQueryable<TUser> Users => _usersCollection.AsQueryable();
     }
 }
