@@ -1,6 +1,6 @@
 # AspNetCore.Identity.MongoDB [![Build Status](https://travis-ci.org/tugberkugurlu/AspNetCore.Identity.MongoDB.svg?branch=master)](https://travis-ci.org/tugberkugurlu/AspNetCore.Identity.MongoDB)
 
-MongoDB data store adaptor for [ASP.NET Core Identity](https://github.com/aspnet/Identity), which allows you to build ASP.NET Core web applications, including membership, login, and user data. With this library, you can store your user's membership related data on MongoDB.
+[MongoDB](https://www.mongodb.com/) data store adaptor for [ASP.NET Core Identity](https://github.com/aspnet/Identity), which allows you to build ASP.NET Core web applications, including membership, login, and user data. With this library, you can store your user's membership related data on MongoDB.
 
 ## Using the Library
 
@@ -10,10 +10,21 @@ MongoDB data store adaptor for [ASP.NET Core Identity](https://github.com/aspnet
 
 You can find some samples under [./samples](./samples) folder and each of the sample contain a README file on its own with the instructions showing how to run them.
 
+### Tests
+
+In order to be able to run the tests, you need to have MongoDB up and running on `localhost:27017`. You can easily do this by running the below Docker command:
+
+```bash
+docker run --name some-mongo -d -p "27017:27017" mongo:3
+```
+
+After that, you can run the tests through your prefered test runner (e.g. JetBrains Rider test runner) or by invoking the `dotnet test` command under the test project directory.
+
 ## Contributors
 
  - [Matt Whetton](https://github.com/mattwhetton)
  - [Soren Zand](https://github.com/SorenZ)
+ - [Rethabile Mokoena](https://github.com/rm2k)
 
 ## License
 
